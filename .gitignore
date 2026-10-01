@@ -1,0 +1,81 @@
+# --- Python 기본 및 캐시 파일 ---
+__pycache__/
+*.py[cod]
+*.py[codz]
+*$py.class
+*.so
+.Python
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.cache/
+
+# --- 가상환경 및 패키지 관리 ---
+env/
+myenv/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+*.egg-info/
+.eggs/
+build/
+dist/
+sdist/
+var/
+wheels/
+*.egg
+
+# --- 환경 변수 및 보안 파일 ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+*_key.json
+gcp_credentials.json
+
+# --- 대용량 파일 및 모델 관련 (머신러닝/AI 프로젝트용) ---
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+*.ckpt
+*.parquet
+*.sqlite3
+*.faiss
+*.pkl
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+chroma/
+chroma_db/
+vector_db/
+
+# --- 데이터 폴더 (폴더 구조는 유지하고 내부 파일만 무시) ---
+data/raw/*
+data/processed/*
+data/outputs/*
+!data/.gitkeep
+!data/**/.gitkeep
+
+# --- 로그 및 실험 결과 ---
+*.log
+wandb/
+mlruns/
+lightning_logs/
+experiment_log.csv
+
+# --- 에디터 및 OS 설정 ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+tempCodeRunnerFile.py
+CLAUDE.md

@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "service_ad_system"
+version = "0.0.1"
+description = "Small business AI advertising copy and image generation service"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    # FastAPI & Web Core
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "python-multipart>=0.0.9",
+    # Database & ORM (Async)
+    "sqlalchemy>=2.0",
+    "asyncpg>=0.29",       # PostgreSQL 비동기 드라이버 (필요시 aiosqlite 추가 가능)
+    "alembic>=1.13",       # DB 마이그레이션 도구
+    # AI Hub API Client (현재 사용 중인 허깅페이스 API 연동 필수)
+    "huggingface_hub>=0.22",
+    # Frontend (Streamlit 대시보드)
+    "streamlit>=1.32",
+    "requests>=2.31",      # 프론트엔드에서 백엔드 API 호출용
+    # Utilities & Monitoring
+    "pillow>=10.2",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "loguru>=0.7",
+    "prometheus-fastapi-instrumentator>=7.0",
+]
+
+[project.optional-dependencies]
+# 로컬에서 직접 대형 모델(Qwen, Stable Diffusion 등)을 GPU로 구동하고 싶을 때만 설치
+ml = [
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "transformers>=4.44",
+    "accelerate>=0.30",
+    "diffusers>=0.27",
+    "sentencepiece>=0.2",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
