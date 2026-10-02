@@ -89,7 +89,8 @@ streamlit run src/service_ad_system/frontend/app.py --server.port 8501
 
 본 프로젝트의 기획 배경, 시스템 아키텍처 및 트러블슈팅 내용이 담긴 보고서입니다.
 
-[프로젝트 보고서 확인하기](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
-### 📊 프로젝트 업무일지 (PDF 보고서)
 
-* [📥 프로젝트 업무일지 PDF 다운로드 및 확인하기](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
+[프로젝트 보고서 확인하기](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
+
+
+[프로젝트 업무일지](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
