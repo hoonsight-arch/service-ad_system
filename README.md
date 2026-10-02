@@ -91,5 +91,4 @@ streamlit run src/service_ad_system/frontend/app.py --server.port 8501
 
 [프로젝트 보고서 확인하기](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
 
-
 [프로젝트 업무일지 확인하기](./docs/소상공인%20맞춤형%20AI%20광고%20서비스(Service_AD_System)%20프로젝트%20보고서%20이태훈.pdf)
